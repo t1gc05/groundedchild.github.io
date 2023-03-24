@@ -7,10 +7,8 @@
 	<style>
 		body {
 			font-family: 'Comfortaa', sans-serif;
+			animation: bubble 10s ease-in-out infinite;
 			background-color: #d1f5d3;
-			background-image: url('https://www.transparenttextures.com/patterns/bubble-wrap.png'), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
-			background-repeat: repeat, repeat;
-			background-position: center top, center bottom;
 		}
 
 		h1 {
@@ -30,7 +28,7 @@
 			padding: 2em;
 			text-align: justify;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			background-color: #a0a0a0;
+			background-color: #ffffff;
 		}
 
 		img {
@@ -41,6 +39,23 @@
 
 		a {
 			color: #0077b5;
+		}
+
+		@keyframes bubble {
+			0% {
+				background-image: url('https://www.transparenttextures.com/patterns/bubble-wrap.png'), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
+				background-position: center top, center bottom;
+			}
+
+			50% {
+				background-image: url('https://www.transparenttextures.com/patterns/purple-bubbles.png'), url('https://www.transparenttextures.com/patterns/green-bubbles.png');
+				background-position: center center, center center;
+			}
+
+			100% {
+				background-image: url('https://www.transparenttextures.com/patterns/bubble-wrap.png'), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
+				background-position: center top, center bottom;
+			}
 		}
 	</style>
 </head>
