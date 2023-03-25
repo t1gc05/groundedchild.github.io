@@ -7,62 +7,62 @@
 	<style>
 		body {
 			font-family: 'Comfortaa', sans-serif;
-			animation: bubble 10s ease-in-out infinite;
 			background-color: #d1f5d3;
 		}
 
 		h1 {
 			font-size: 3em;
 			text-align: center;
+			color: #000000;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
 
 		p {
 			font-size: 1.2em;
 			line-height: 1.5em;
 			margin: 1em;
+			color: #6b6b6b;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
 
 		.container {
-			max-width: 800px;
+			max-width: 1200px;
+			height: 850px;
 			margin: 0 auto;
 			padding: 2em;
 			text-align: justify;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 		}
 
 		img {
 			max-width: 100%;
 			height: auto;
-			margin: 1em 0;
+			margin: 1em 0 0 0;
 		}
 
 		a {
-			color: #0077b5;
+			color: #5e3c58;
+			text-decoration: underline;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
-
-		@keyframes bubble {
-			0% {
-				background-image: url('https://www.transparenttextures.com/patterns/bubble-wrap.png'), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
-				background-position: center top, center bottom;
-			}
-
-			50% {
-				background-image: url('https://www.transparenttextures.com/patterns/purple-bubbles.png'), url('https://www.transparenttextures.com/patterns/green-bubbles.png');
-				background-position: center center, center center;
-			}
-
-			100% {
-				background-image: url('https://www.transparenttextures.com/patterns/bubble-wrap.png'), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
-				background-position: center top, center bottom;
-			}
+		
+		/* Style for copyright notice */
+		footer {
+			text-align: center;
+			font-size: 0.8em;
+			color: #6b6b6b;
+			margin-top: 2em;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>About Me</h1>
-		<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future software engineer. During my free time, I enjoy developing quality of life applications using random coding languages that interest me from time to time. You can check out my latest projects on my website at <a href="https://sites.google.com/view/groundedchild">https://sites.google.com/view/groundedchild</a>.</p>
+		<h1>GroundedChild's Website</h1>
+		<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future software engineer. During my free time, I enjoy developing quality of life applications using random coding languages that interest me from time to time. You can check out all my projects on my github at <a href="https://github.com/GroundedChild">https://github.com/GroundedChild</a>.</p>
 	</div>
+	
+	<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>	
 </body>
 </html>
