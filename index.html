@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>GroundedChild</title>
@@ -47,8 +48,31 @@
 			text-decoration: underline;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
-		
-		/* Style for copyright notice */
+
+		.round-button {
+			position: fixed;
+			bottom: 20px;
+			left: 20px;
+			background-color: #5e3c58;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.round-button.active {
+			background-color: #ffffff;
+		}
+
+
+		.round-button:active {
+			transform: scale(0.9);
+		}
+
 		footer {
 			text-align: center;
 			font-size: 0.8em;
@@ -57,12 +81,26 @@
 		}
 	</style>
 </head>
-<body>
-	<div class="container">
-		<h1>GroundedChild's Website</h1>
-		<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future software engineer. During my free time, I enjoy developing quality of life applications using random coding languages that interest me from time to time. You can check out all my projects on my github at <a href="https://github.com/GroundedChild">https://github.com/GroundedChild</a>.</p>
-	</div>
-	
-	<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>	
+
+<a href="#" class="round-button"></a>
+
+<div class="container">
+	<h1>GroundedChild's Website</h1>
+	<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
+		software engineer. During my free time, I enjoy developing quality of life applications using random coding
+		languages that interest me from time to time. You can check out all my projects on my github at <a
+			href="https://github.com/GroundedChild">https://github.com/GroundedChild</a>.</p>
+</div>
+
+<script>
+	const button = document.querySelector('.round-button');
+
+	button.addEventListener('click', function () {
+		button.classList.toggle('active');
+	});
+</script>
+
+<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
 </body>
+
 </html>
