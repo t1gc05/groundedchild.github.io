@@ -8,13 +8,15 @@
 	<style>
 		body {
 			font-family: 'Comfortaa', sans-serif;
-			background-color: #d1f5d3;
+			background-color: #000000;
+			background: linear-gradient(to bottom, rgb(0, 0, 0) 88%, rgb(142, 0, 255) 100%);
+
 		}
 
 		h1 {
 			font-size: 3em;
 			text-align: center;
-			color: #000000;
+			color: #41007e;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
 
@@ -22,20 +24,39 @@
 			font-size: 1.2em;
 			line-height: 1.5em;
 			margin: 1em;
-			color: #6b6b6b;
+			color: #ffffff;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		}
 
 		.container {
-			max-width: 1200px;
-			height: 850px;
+			max-width: 80vw;
+			height: 98vh;
 			margin: 0 auto;
 			padding: 2em;
 			text-align: justify;
-			background-color: #ffffff;
+			background-color: #1d1d1d;
 			border-radius: 10px;
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease-out;
 		}
+
+
+		.container:hover {
+			transform: scale(1.05);
+		}
+
+		.container:hover img {
+			transform: scale(1.05);
+		}
+
+		.container:not(:hover) {
+			transform: scale(1);
+		}
+
+		.container:not(:hover) img {
+			transform: scale(1);
+		}
+
 
 		img {
 			max-width: 100%;
@@ -44,64 +65,55 @@
 		}
 
 		a {
-			color: #5e3c58;
+			color: #6600cc;
 			text-decoration: underline;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		}
-
-		.round-button {
-			position: fixed;
-			bottom: 20px;
-			left: 20px;
-			background-color: #5e3c58;
-			border-radius: 50%;
-			width: 50px;
-			height: 50px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.3);
-			cursor: pointer;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.round-button.active {
-			background-color: #ffffff;
-		}
-
-
-		.round-button:active {
-			transform: scale(0.9);
 		}
 
 		footer {
 			text-align: center;
 			font-size: 0.8em;
-			color: #6b6b6b;
+			color: #ffffff;
 			margin-top: 2em;
+		}
+
+		body.dark-mode {
+			background-color: #111111;
+		}
+
+		body.dark-mode h1 {
+			color: #ffffff;
+		}
+
+		body.dark-mode p {
+			color: #cccccc;
+		}
+
+		body.dark-mode .container {
+			background-color: #333333;
+			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+		}
+
+		body.dark-mode a {
+			color: #6600cc;
+		}
+
+		body.dark-mode footer {
+			color: #cccccc;
 		}
 	</style>
 </head>
 
-<a href="#" class="round-button"></a>
+<body>
+	<div class="container">
+		<h1>GroundedChild's Website</h1>
+		<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
+			software engineer. During my free time, I enjoy developing quality of life applications using random coding
+			languages that interest me from time to time. You can check out all my projects on my github at <a
+				href="https://github.com/GroundedChild">https://github.com/GroundedChild</a>.</p>
+	</div>
 
-<div class="container">
-	<h1>GroundedChild's Website</h1>
-	<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
-		software engineer. During my free time, I enjoy developing quality of life applications using random coding
-		languages that interest me from time to time. You can check out all my projects on my github at <a
-			href="https://github.com/GroundedChild">https://github.com/GroundedChild</a>.</p>
-	<ul>Test 1</ul>
-</div>
-
-<script>
-	const button = document.querySelector('.round-button');
-
-	button.addEventListener('click', function () {
-		button.classList.toggle('active');
-	});
-</script>
-
-<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
+	<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
 </body>
 
 </html>
