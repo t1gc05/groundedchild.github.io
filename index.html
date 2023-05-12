@@ -2,118 +2,138 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>GroundedChild</title>
-	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-	<style>
-		body {
-			font-family: 'Comfortaa', sans-serif;
-			background-color: #000000;
-			background: linear-gradient(to bottom, rgb(0, 0, 0) 88%, rgb(142, 0, 255) 100%);
+    <meta charset="utf-8">
+    <title>GroundedChild</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #000000;
+            background: linear-gradient(to bottom, #2f0a34, #26073d, #20012c, #240c29, #30053b);
+            background-size: 100% 400%;
+            animation: gradient 30s ease-in-out infinite;
+        }
 
-		}
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
 
-		h1 {
-			font-size: 3em;
-			text-align: center;
-			color: #41007e;
-			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		}
+            50% {
+                background-position: 100% 100%;
+            }
 
-		p {
-			font-size: 1.2em;
-			line-height: 1.5em;
-			margin: 1em;
-			color: #ffffff;
-			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		}
-
-		.container {
-			max-width: 80vw;
-			height: 98vh;
-			margin: 0 auto;
-			padding: 2em;
-			text-align: justify;
-			background-color: #1d1d1d;
-			border-radius: 10px;
-			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-			transition: transform 0.3s ease-out;
-		}
+            100% {
+                background-position: 0% 0%;
+            }
+        }
 
 
-		.container:hover {
-			transform: scale(1.05);
-		}
 
-		.container:hover img {
-			transform: scale(1.05);
-		}
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #41007e;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
 
-		.container:not(:hover) {
-			transform: scale(1);
-		}
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            margin: 1em;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+        }
 
-		.container:not(:hover) img {
-			transform: scale(1);
-		}
+        .container {
+            max-width: 80vw;
+            height: 98vh;
+            margin: 0 auto;
+            padding: 2em;
+            text-align: justify;
+            background-color: #0000007e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
 
 
-		img {
-			max-width: 100%;
-			height: auto;
-			margin: 1em 0 0 0;
-		}
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+        }
 
-		a {
-			color: #6600cc;
-			text-decoration: underline;
-			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		}
 
-		footer {
-			text-align: center;
-			font-size: 0.8em;
-			color: #ffffff;
-			margin-top: 2em;
-		}
+        .container:hover img {
+            transform: scale(1.05);
+        }
 
-		body.dark-mode {
-			background-color: #111111;
-		}
+        .container:not(:hover) {
+            transform: scale(1);
+        }
 
-		body.dark-mode h1 {
-			color: #ffffff;
-		}
+        .container:not(:hover) img {
+            transform: scale(1);
+        }
 
-		body.dark-mode p {
-			color: #cccccc;
-		}
 
-		body.dark-mode .container {
-			background-color: #333333;
-			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-		}
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0 0 0;
+        }
 
-		body.dark-mode a {
-			color: #6600cc;
-		}
+        a {
+            color: #6600cc;
+            text-decoration: underline;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
 
-		body.dark-mode footer {
-			color: #cccccc;
-		}
-	</style>
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #ffffff;
+            margin-top: 2em;
+        }
+
+        body.dark-mode {
+            background-color: #111111;
+        }
+
+        body.dark-mode h1 {
+            color: #ffffff;
+        }
+
+        body.dark-mode p {
+            color: #cccccc;
+        }
+
+        body.dark-mode .container {
+            background-color: #333333;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        body.dark-mode a {
+            color: #6600cc;
+        }
+
+        body.dark-mode footer {
+            color: #cccccc;
+        }
+
+    </style>
 </head>
 
 <body>
-	<div class="container">
-		<h1>GroundedChild's Website</h1>
-		<p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
-			software engineer. During my free time, I enjoy developing quality of life applications using random coding
-			languages that interest me from time to time. You can check out all my projects on my <a
-				href="https://github.com/GroundedChild">GitHub</a>.</p>
-	</div>
+    <div class="container">
+        <h1>GroundedChild's Website</h1>
+        <p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
+            software engineer. During my free time, I enjoy developing quality of life applications using random coding
+            languages that interest me from time to time. You can check out all my projects on my <a
+                href="https://github.com/GroundedChild">GitHub</a>.</p>
+    </div>
 
-	<footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
+    <footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
 </body>
 
 </html>
