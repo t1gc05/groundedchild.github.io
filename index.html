@@ -34,7 +34,6 @@
             font-size: 3em;
             text-align: center;
             color: #000000;
-            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.144);
         }
 
         p {
@@ -126,6 +125,52 @@
         body.dark-mode footer {
             color: #cccccc;
         }
+
+        .social-link {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.2s ease-out, color 0.2s ease-out;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            color: #ae00ff;
+        }
+
+        .projects-link {
+            position: absolute;
+            top: 1em;
+            right: 6em;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.2s ease-out, color 0.2s ease-out;
+        }
+
+        .projects-link:hover {
+            transform: scale(1.1);
+            color: #ae00ff;
+        }
+
+        .about-link {
+            position: absolute;
+            top: 1em;
+            right: 12em;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.2s ease-out, color 0.2s ease-out;
+        }
+
+        .about-link:hover {
+            transform: scale(1.1);
+            color: #ae00ff;
+        }
+
     </style>
 </head>
 <script>window.onload = function () {
@@ -135,6 +180,9 @@
 
 <body>
     <div class="container">
+        <a href="https://github.com/your-github-username" target="_blank" class="projects-link">Projects</a>
+        <a href="https://github.com/your-github-username" target="_blank" class="social-link">Social</a>
+        <a href="https://github.com/your-github-username" target="_blank" class="about-link">About</a>
         <h1>GroundedChild's Website</h1>
     </div>
 
