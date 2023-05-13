@@ -9,7 +9,7 @@
         body {
             font-family: 'Comfortaa', sans-serif;
             background-color: #000000;
-            background: linear-gradient(to bottom, #2f0a34, #26073d, #20012c, #240c29, #30053b);
+            background: linear-gradient(to bottom, #2f0a34, #4d0050, #700067, #700086, #8c00af);
             background-size: 100% 400%;
             animation: gradient 30s ease-in-out infinite;
         }
@@ -55,27 +55,33 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
+        .container {
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            transform: scale(1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+        }
 
         .container:hover {
             transform: scale(1.05);
             box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
         }
 
-
-        .container:hover img {
-            transform: scale(1.05);
-        }
-
-        .container:not(:hover) {
+        .container:not(:hover):not(.fade-in) {
             transform: scale(1);
         }
 
-        .container:not(:hover) img {
+        .container:not(:hover):not(.fade-in) img {
             transform: scale(1);
         }
 
+        .container.fade-in {
+            opacity: 1;
+        }
 
         img {
             max-width: 100%;
@@ -120,17 +126,16 @@
         body.dark-mode footer {
             color: #cccccc;
         }
-
     </style>
 </head>
+<script>window.onload = function () {
+        document.querySelector('.container').classList.add('fade-in');
+    };
+</script>
 
 <body>
     <div class="container">
         <h1>GroundedChild's Website</h1>
-        <p>Currently, my main focus is completing my computer science courses and enhancing my skills as a future
-            software engineer. During my free time, I enjoy developing quality of life applications using random coding
-            languages that interest me from time to time. You can check out all my projects on my <a
-                href="https://github.com/GroundedChild">GitHub</a>.</p>
     </div>
 
     <footer>&copy; 2023 GroundedChild. All rights reserved.</footer>
