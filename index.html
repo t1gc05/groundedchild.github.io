@@ -54,13 +54,6 @@
             text-align: center;
             margin-top: 10px;
         }
-        .profile-status {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .profile-status h3, .profile-status p {
-            font-weight: lighter;
-        }
         .projects-container {
             max-height: 400px;
             margin-top: 20px;
@@ -82,9 +75,14 @@
         .projects-container::-webkit-scrollbar-track {
             background-color: rgba(255, 255, 255, 0.1);
         }
+        .project-container.red {
+            background-color: red;
+        }
+        .project-container.green {
+            background-color: green;
+        }
         .project-container {
             position: relative;
-            background-color: green;
             border: 1px solid #000000;
             margin-bottom: 20px;
             padding: 20px;
@@ -100,11 +98,13 @@
         .project-container h3 {
             font-size: 20px;
             color: #c9d1d9;
+            transition: opacity 0.3s ease-in-out;
         }
         .project-container p {
             font-size: 16px;
             color: #c9d1d9;
             margin-top: 10px;
+            transition: opacity 0.3s ease-in-out;
         }
         .tooltip {
             position: absolute;
@@ -165,36 +165,31 @@
         <div class="profile-name">
             GroundedChild
         </div>
-        <div class="profile-bio">
+        <div class="profile-bio" style="text-align: center;">
             This website is a work in progress, serving as a fancier version of GitHub with additional information on my projects.
-        </div>
+        </div>        
         <div class="projects-container">
-            <div class="project-container">
+            <div class="project-container green">
                 <a href="https://github.com/GroundedChild/Microsoft-Rewards-Auto-Searcher" target="_blank">
                     <h3>Microsoft Rewards Auto Searcher</h3>
                     <p>A simple Visual Basic Script for automatically searching to earn points through Microsoft's Rewards Program</p>
-                    <div class="tooltip tooltip-green">Last updated on: 10/26/23</div>
+                    <div class="tooltip">Last updated on: 10/26/23</div>
+                </a>
+            </div>
+            <div class="project-container red">
+                <a href="https://github.com/GroundedChild/Analog-Clock" target="_blank">
+                    <h3>Analog Clock</h3>
+                    <p>A fully functioning analog clock coded in Python</p>
+                    <div class="tooltip">Last updated on: 3/23/23</div>
                 </a>
             </div>
         </div>
         <div class="contacts">
             <h2>Contact Information</h2>
             <div class="contact-item">
-                Discord: GroundedChild
+                Discord: groundedchild
             </div>
         </div>
     </div>
-
-    <script>
-        const projectContainers = document.querySelectorAll(".project-container");
-        projectContainers.forEach((container) => {
-            container.addEventListener("mouseenter", () => {
-                container.querySelector(".tooltip").style.opacity = "1";
-            });
-            container.addEventListener("mouseleave", () => {
-                container.querySelector(".tooltip").style.opacity = "0";
-            });
-        });
-    </script>
 </body>
 </html>
